@@ -9,7 +9,7 @@ class PostsController < ApplicationController
         @post = Post.new(post_params)
 
         if @post.save
-            render json: @post, status: :created, location: @group
+            render json: @post, status: :created, location: @user
         else
             render json: @post.errors, status: :unprocessable_entity
         end

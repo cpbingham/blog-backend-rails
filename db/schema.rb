@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_17_012520) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_17_214948) do
   create_table "comments", charset: "utf8mb4", force: :cascade do |t|
     t.text "body"
     t.bigint "user_id", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_17_012520) do
     t.string "username"
     t.string "email"
     t.string "salt"
-    t.text "hash"
+    t.text "password_hash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
