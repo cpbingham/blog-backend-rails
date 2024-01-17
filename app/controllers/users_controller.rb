@@ -7,12 +7,18 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        
+
         if @user.save
-            render json: @user, status: :created, location: @user
+            render json: {status: 'ok', message: 'created', data: @user}, 
+                status: :created, 
+                location: @user
         else
             render json: @post.errors, status: :unprocessable_entity 
         end
+    end
+
+    def register
+        debugger
     end
 
     private
