@@ -20,12 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_17_004951) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "tests", charset: "latin1", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", charset: "latin1", force: :cascade do |t|
     t.string "username"
     t.string "email"
